@@ -1,0 +1,26 @@
+{
+  "name": "toktik-notifications",
+  "version": "1.0.0",
+  "description": "Notification system that is basically the websocket backend because Django hates us.",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanawat-toktik/toktik-notifications.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thanawat-toktik/toktik-notifications/issues"
+  },
+  "homepage": "https://github.com/thanawat-toktik/toktik-notifications#readme",
+  "dependencies": {
+    "ioredis": "^5.3.2",
+    "nodemon": "^3.0.1",
+    "redis": "^4.6.10",
+    "socket.io": "^4.7.2"
+  }
+}

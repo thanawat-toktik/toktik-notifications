@@ -1,7 +1,7 @@
 function handleNotif(io, payload) {
   console.log('Got notification')
   const receivers = payload.receivers
-  for (let userId in receivers){
+  for (let userId of receivers){
     // craft the payload
     const data = {
       message: payload.message,
@@ -10,7 +10,7 @@ function handleNotif(io, payload) {
     }
     
     io.emit(
-      userId, // emit to the channel of that userId
+      `user-${userId}`, // emit to the channel of that userId
       data
     );
   }

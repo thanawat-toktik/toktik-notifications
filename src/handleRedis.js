@@ -13,12 +13,15 @@ function handleNotif(io, payload) {
       `user-${userId}`, // emit to the channel of that userId
       data
     );
-  }
-  
+  }  
 }
 
 function handleComment(io, payload) {
   console.log('Got comment')
+  io.emit(
+    `video-comment-${payload.video_id}`,
+    payload, // didnt even bother removing video_id B)
+  );
 }
 
 module.exports = {

@@ -10,7 +10,7 @@ const { handleNotif, handleComment } = require('./handleRedis.js');
 // Listen to WS from frontend
 const io = socketIO(server, {
   cors: {
-    origin: 'http://localhost:8080',
+    origin: ['http://localhost:8080', 'http://localhost'],
     credentials: true,
   },
   allowEIO3: true,

@@ -29,6 +29,7 @@ const redisClient = new Redis(customConfig);
 redisClient.subscribe('WSS-comment');
 redisClient.subscribe('WSS-notif');
 redisClient.on('message', (channel, data) => {
+  console.log("Connected to Redis")
   const payload = JSON.parse(data)
   if (channel === 'WSS-notif') {
     handleNotif(io, payload)
